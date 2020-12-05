@@ -1,0 +1,125 @@
+@import "./resettAll.css";
+
+
+body {
+    font-family: 'Arial (Hebrew)', Arial;
+    background: gray repeat-x center top;
+    line-height: 1;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #cbcbcb;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #005ca0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #005CA0 !important;
+}
+
+a:focus {
+    outline: thin dotted silver;
+}
+
+a:active {
+    border-width: 1px;
+    border-style: dotted;
+}
+
+
+
+.select {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 64px;
+    height: 16px;
+    padding: 3px 24px 0 8px;
+    color: #005ca0;
+    background: url(/web/20171013071424im_/http://paz.co.il/images/dropdown_bg.png) no-repeat;
+    overflow: hidden;
+}
+
+
+.main {
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#fixed-footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999;
+
+    margin: 0 auto;
+    padding: 0;
+
+    max-width: 100%;
+    height: 38px;
+
+}
+
+.footer-menu-container {
+    /* width: 900px; */
+    max-width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footer-menu {
+    font-size: 14px;
+}
+
+.footer-menu ul {
+    color: #fff;
+}
+
+.red-text,
+.footer-menu ul li:last-child {
+    color: red;
+}
+
+/* float fix, not really needed here */
+.clear-fix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.footer-menu li.sep {
+    margin: 0 5px;
+    margin-top: 16px;
+}
+
+
+#sideMenu ul li a:hover,
+#sideMenu ul li a:active,
+#sideMenu ul li a:focus {
+    color: #005CA0;
+}

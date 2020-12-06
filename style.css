@@ -30,47 +30,15 @@ body {
 }
 
 
-/* ========================== */
-/*       Flex styling */
-/* ========================== */
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
+/* float fix, not really needed here */
+.clear-fix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
-.flex-row-wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center-center {
-    align-items: center;
-    justify-content: center;
-}
-
-.flex-h-center {
-    justify-content: center;
-}
-
-.flex-v-center {
-    align-items: center;
-
-}
-
-.flex-v-start {
-    align-items: flex-start;
-}
-
-.flex-v-stretch {
-    align-items: stretch;
-}
 
 /* ========================== */
 /* debug only */
@@ -121,6 +89,49 @@ body {
     background-color: rgb(165, 173, 247);
     border: 1px solid rgb(6, 12, 61);
 }
+
+/* ========================== */
+/*       Flex styling */
+/* ========================== */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-h-center {
+    justify-content: center;
+}
+
+.flex-v-center {
+    align-items: center;
+
+}
+
+.flex-v-start {
+    align-items: flex-start;
+}
+
+.flex-v-stretch {
+    align-items: stretch;
+}
+
 
 /* ========================== */
 
@@ -245,6 +256,7 @@ a:active {
     min-height: 62%;
     min-width: 100%;
     /* margin: 0.1rem 0 0.1rem 0; */
+
 }
 
 .small-articles {
@@ -266,6 +278,11 @@ a:active {
 .small-image {
     flex-basis: 32.33%;
     width: 32.33%;
+}
+
+.big-articles article,
+.big-articles article .big-image-text-area {
+    border-radius: 0 0 20px 0;
 }
 
 #fixed-footer {
@@ -329,8 +346,9 @@ a:active {
     margin: 0 5px;
 }
 
-
+/* ======================== */
 /*  Colors and Backgrounds */
+/* ======================= */
 
 .paz-yellow-color {
     color: #fecd18;
@@ -370,6 +388,23 @@ a:active {
     /* background: rgb(255,255,255); */
 }
 
+/* #big-image1  */
+.big-articles article:nth-child(1) {
+    background: url("./images/big_img_1.jpg") center/ 100% 100% no-repeat;
+}
+
+.big-articles article:nth-child(2) {
+    background: url("./images/big_img_2.jpg") center/ 100% 100% no-repeat;
+}
+
+.big-articles article:nth-child(3) {
+    background: url("./images/big_img_3.jpg") center/ 100% 100% no-repeat;
+}
+
+.big-articles article .big-image-text-area {
+    background-color: #737373;
+    /* background-color: rgb(115, 115, 115); */
+}
 
 #fixed-footer {
     background: #909090;
@@ -388,14 +423,6 @@ a:active {
     color: red;
 }
 
-/* float fix, not really needed here */
-.clear-fix::after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
 
 
 #sideMenu ul li a:hover,

@@ -217,51 +217,73 @@ a:active {
     height: 105px;
     /* height: 125px; */
     /* height: 40%; */
-
 }
 
 .main {
-    height: 70%;
+    height: 100vh;
+    min-height: 44rem;
+
+    min-width: 900px;
+
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+}
+
+.content_wrapper::before {
+    position: relative;
+    display: display-box;
+    margin: 0px;
+    padding: 0px;
+    /* content: "content_wrapper before"; */
 }
 
 .content_wrapper {
+    position: absolute;
+    top: 135px;
+
     height: 100%;
-    max-height: 100%;
+    min-height: 100vh;
+
     min-width: 100%;
     max-width: 100%;
 
     margin: 0 auto;
-    padding: 0;
+    padding: 0px;
 
     display: flex;
-    /* justify-content: stretch; */
     align-items: flex-start;
 }
 
 .center-content {
-    height: inherit;
-    min-height: inherit;
-    width: 50%;
-    min-width: 50%;
-    max-width: 50%;
+    height: 100%;
+    min-height: 100%;
+
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
 
     /* align-content: space-around; */
     align-content: space-between;
-    align-items: center;
 
+    align-items: center;
 }
 
 .big-articles {
-    height: 62%;
-    min-height: 62%;
+    height: 60.5%;
+    min-height: 60.5%;
+
     min-width: 100%;
-    /* margin: 0.1rem 0 0.1rem 0; */
+
+    /* width: 293px;
+    height: 355px; */
 
 }
 
 .small-articles {
-    height: 35%;
-    min-height: 35%;
+
+    height: 37%;
+    min-height: 37%;
     min-width: 100%;
     /* margin: 0.1rem 0 0.1rem 0; */
 }
@@ -283,6 +305,38 @@ a:active {
 .big-articles article,
 .big-articles article .big-image-text-area {
     border-radius: 0 0 20px 0;
+}
+
+
+.small-articles article {
+    border-radius: 0 20px 0 0;
+}
+
+.big-image-text-area {
+    height: 33%;
+}
+
+
+
+.big-image-text-area h3,
+.big-image-text-area p,
+.big-image-text-area a {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.big-image-text-area h3,
+.big-image-text-area p,
+.big-image-text-area a {
+
+    font-size: 13px;
+    line-height: 13.2px;
+}
+
+.flex-column-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 #fixed-footer {
@@ -423,15 +477,14 @@ a:active {
     color: red;
 }
 
-
+.big-image-text-area h3,
+.big-image-text-area p,
+.big-image-text-area a {
+    color: white;
+}
 
 #sideMenu ul li a:hover,
 #sideMenu ul li a:active,
 #sideMenu ul li a:focus {
     color: #005CA0;
-}
-
-.tab-text-bg-color {
-    background-color: #7d7d7c;
-    /* background-color:rgb(125,125,124; */
 }

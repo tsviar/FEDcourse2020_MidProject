@@ -1,5 +1,12 @@
 /* @import "./resettAll.css"; */
-@import "./resettAll2.css";
+/* @import "./resettAll2.css"; */
+
+/* =========================== */
+/*        RESET all            */
+/* =========================== */
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -7,31 +14,25 @@ body {
 }
 
 body {
-    /* display: block; */
-    padding: 0;
     margin: 0;
-
-    /* position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0; */
-
-    line-height: 1.1;
-    height: 100%;
-    /* min-height: 996px; */
-    /* min-height: 100vh; */
-    width: 100vw;
-    min-width: 100rem;
-
 }
 
 body {
-    font-family: 'Arial (Hebrew)', Arial;
-    background: #fff repeat-x center top;
+    background: #fff;
     /* padding-bottom: 38px; */
 }
 
+.heb-support {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Arial (Hebrew)', Arial;
+    line-height: 1.1;
+}
+
+
+/* ========================== */
+/*       Flex styling */
+/* ========================== */
 
 .flex-row {
     display: flex;
@@ -64,7 +65,43 @@ body {
 
 }
 
+.flex-v-start {
+    align-items: flex-start;
+}
 
+
+/* ========================== */
+/* debug only */
+/* ========================== */
+.main {
+    border: 1px black dashed;
+    background-color: burlywood;
+}
+
+.content_wrapper {
+    border: 1px red dashed;
+    background-color: yellow;
+}
+
+.main-header {
+    background-color: blueviolet;
+    color: #000;
+}
+
+.big-articles {
+    background-color: orangered;
+}
+
+.small-articles {
+    background-color: brown;
+    border: 1px brown solid;
+}
+
+/* ========================== */
+
+/* ========================== */
+/*   nav headers styling      */
+/* ========================== */
 
 h1 {
     font-size: 15px;
@@ -80,6 +117,21 @@ h2 {
     color: #005ca0;
 }
 
+
+nav>ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+nav>ul li {
+    list-style-type: none;
+}
+
+nav>ul li a,
 a {
     text-decoration: none;
 }
@@ -98,8 +150,6 @@ a:active {
     border-style: dotted;
 }
 
-
-
 .select {
     position: absolute;
     left: 5px;
@@ -108,53 +158,42 @@ a:active {
     height: 16px;
     padding: 3px 24px 0 8px;
     color: #005ca0;
-    background: url(/web/20171013071424im_/http://paz.co.il/images/dropdown_bg.png) no-repeat;
+    background: gray;
     overflow: hidden;
 }
 
-/* ========================== */
-.main {
-    border: 1px black dashed;
-}
-
-.wrapper {
-    border: 1px red dashed;
-}
-
-.main-header {
-    background-color: blueviolet;
-}
-
-.big-articles {
-    background-color: orangered;
-}
-
-.small-articles {
-    background-color: brown;
-    border: 1px brown solid;
-}
-
-/* ========================== */
-
-.main {
-
-    /* height: 80%; */
-    min-height: 90vh;
-    width: auto;
-    min-width: 100rem;
-    /* max-width: 900px; */
+/* ======================= */
+/*     page layout items   */
+/* ======================= */
+.main-header,
+.main,
+#fixed-footer {
+    /* width: 900px; */
+    width: 100%;
+    min-width: 900px;
+    /* min-width: 100%; */
 
     margin: 0 auto;
     padding: 0;
-
-    line-height: 1.1;
-    align-items: stretch;
 }
 
-.wrapper {
+.main-header {
+    height: 105px;
+    /* height: 125px; */
+    /* height: 40%; */
+
+}
+
+.main {
+    height: 75%;
+}
+
+.content_wrapper {
     /* height: 100%; */
-    max-height: 90%;
-    min-width: 50%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
     margin: 0 auto;
     padding: 0;
 
@@ -163,12 +202,9 @@ a:active {
     align-items: flex-start;
 }
 
-.main-header {
-    width: 100%;
+.mid-content {
+    max-height: 100%;
     min-width: 100%;
-    /* height: 105px; */
-    /* height: 125px; */
-    height: 15%;
 }
 
 .big-articles {
@@ -191,11 +227,11 @@ a:active {
     right: 0;
     left: 0;
     z-index: 9999999;
-
+    /* 
     margin: 0 auto;
     padding: 0;
 
-    max-width: 100%;
+    max-width: 100%; */
     height: 38px;
 
     line-height: 1.5rem;

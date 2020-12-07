@@ -316,7 +316,7 @@ a:active {
 
     /* this gives the extra space above the footer when scrolling... */
     /* min-height: 44rem; */
-    min-height: 48rem;
+    min-height: 100rem;
 
     min-width: 900px;
 
@@ -601,13 +601,16 @@ a:active {
 /* .small-articles div article, */
 .small-articles article {
     border-radius: 0 20px 0 0;
+    border: 0.9px hidden darkgray;
+    border-style: outset hidden hidden outset;
 }
 
-.gradient-box {
+.gradient-box,
+.small-articles article::before {
     border-radius: 0 20px 0 0;
 
-    border-top: 1.2px solid #eeeeee;
-    border-bottom: 1.2px solid #fefefe;
+    border-top: 1.8px solid #eeeeee;
+    border-bottom: 0.8px solid #fefefe;
     background-image:
         linear-gradient(#eeeeee, #fefefe),
         linear-gradient(#eeeeee, #fefefe);

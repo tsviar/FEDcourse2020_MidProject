@@ -40,9 +40,12 @@ body {
 }
 
 
+
 /* ========================== */
 /* debug only */
 /* ========================== */
+
+/* 
 .main {
     border: 1px black dashed;
     background-color: burlywood;
@@ -90,6 +93,8 @@ body {
     border: 1px solid rgb(6, 12, 61);
 }
 
+*/
+
 /* ========================== */
 /*       Flex styling */
 /* ========================== */
@@ -132,6 +137,11 @@ body {
     align-items: stretch;
 }
 
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ========================== */
 
@@ -219,9 +229,94 @@ a:active {
     /* height: 40%; */
 }
 
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-center-area {
+    height: 100%;
+
+    width: 60%;
+    min-width: 60%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.logo {
+    flex-basis: 20%;
+    width: 20%;
+
+}
+
+.nav-search-lang {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 80%;
+
+    height: 100%;
+    min-height: 100%;
+
+    width: 80%;
+
+}
+
+.search-lang-bar {
+    /* height: 19px; */
+
+    /* width: 152px; */
+    /* width: 132px; */
+
+}
+
+.search {
+    /* height: 19px;
+    width: 100%;
+    position: relative; */
+    display: flex;
+}
+
+.searchTerm {
+    /* width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF; */
+}
+
+.searchTerm:focus {
+    /* color: #00B4CC; */
+}
+
+.searchButton {
+    /* width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px; */
+}
+
+
+.searchButton {
+    background: url("./images/search_button.png") center/100% no-repeat;
+}
+
 .main {
     height: 100vh;
-    min-height: 44rem;
+
+    /* this gives the extra space above the footer when scrolling... */
+    /* min-height: 44rem; */
+    min-height: 48rem;
 
     min-width: 900px;
 
@@ -280,7 +375,8 @@ a:active {
 
 }
 
-.small-articles {
+.small-articles,
+.gradient-box {
 
     height: 37%;
     min-height: 37%;
@@ -302,21 +398,46 @@ a:active {
     width: 32.33%;
 }
 
-.big-articles article,
-.big-articles article .big-image-text-area {
-    border-radius: 0 0 20px 0;
-}
 
-
-.small-articles article {
-    border-radius: 0 20px 0 0;
-}
 
 .big-image-text-area {
-    height: 33%;
+    height: 27%;
+    width: 85%;
+    min-width: 85%;
+
+    margin: 0;
+    margin-right: 7px;
+    margin-bottom: 7px;
+
+    /* padding: 0rem 0.2rem 0.3rem 0.8rem; */
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+
 }
 
+.big-image-text-area div {
+    text-align: right;
+    height: 90%;
+    /* height: 10%;
+    min-height: 100%;
+ */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 
+}
+
+.big-image-text-area div div a {
+    text-align: left;
+}
 
 .big-image-text-area h3,
 .big-image-text-area p,
@@ -458,6 +579,47 @@ a:active {
 .big-articles article .big-image-text-area {
     background-color: #737373;
     /* background-color: rgb(115, 115, 115); */
+}
+
+
+.small-articles article {
+    background-image: linear-gradient(#fefefe, #eeeeee);
+
+    /* background-color: #fefefe;
+    background-color: rgb(254, 254, 254);
+    background-color: #eeeeee;
+    background-color: rgb(238, 238, 238); */
+}
+
+
+.big-articles article,
+.big-articles article .big-image-text-area {
+    border-radius: 0 0 20px 0;
+}
+
+
+/* .small-articles div article, */
+.small-articles article {
+    border-radius: 0 20px 0 0;
+}
+
+.gradient-box {
+    border-radius: 0 20px 0 0;
+
+    border-top: 1.2px solid #eeeeee;
+    border-bottom: 1.2px solid #fefefe;
+    background-image:
+        linear-gradient(#eeeeee, #fefefe),
+        linear-gradient(#eeeeee, #fefefe);
+    background-size: 1px 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+}
+
+.gradient-box article {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 #fixed-footer {

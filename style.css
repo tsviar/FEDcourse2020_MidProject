@@ -353,7 +353,7 @@ a:active {
 
 }
 
-.tab {
+.tab-33 {
     display: flex;
     flex-basis: 32.33%;
     width: 32.33%;
@@ -373,77 +373,106 @@ a:active {
 }
 
 .tabs article .tab-text-area {
-    background-color: #737373;
-    /* background-color: rgb(115, 115, 115); */
+    /* background-color: #737373; */
+    /* 10% transparent */
+    background-color: rgb(115, 115, 115, 0.9);
+}
+
+
+.tabs article,
+.tabs article .tab-text-area {
+    border-radius: 0 0 2vw 0;
+    /* border-radius: 0 0 20px 0; */
+}
+
+.tabs article .tab-text-area {
+    margin-right: 0.6vw;
+    margin-bottom: 0.6vw;
 }
 
 
 .tab-text-area {
-    height: 27%;
-    width: 85%;
-    min-width: 85%;
+    height: 33%;
+    width: 90%;
+    min-width: 90%;
 
     margin: 0;
-    /* margin-right: 3%;
-    margin-bottom: 3%; */
-
     /* padding: 0rem 0.2rem 0.3rem 0.8rem; */
-
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    align-content: space-around;
+    align-items: baseline;
+    align-content: space-evenly;
 
 }
 
-.tab-text-area div {
-    text-align: right;
-    height: 90%;
-    /* height: 10%;
-    min-height: 100%;
- */
+.tab-text-area .tab-h,
+.tab-text-area .article-text,
+.tab-text-area .tab-link {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-
-.tab-text-area h3,
-.tab-text-area p,
-.tab-text-area a {
-    display: flex;
+    /* none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+    flex: 0 0 100%;
     width: 100%;
-    flex-basis: 100%;
+
+    margin: auto;
+    padding: 0;
+
+    /* flex-wrap: nowrap; */
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    text-align: right;
 }
 
-.tab-text-area h3 {
+
+.tab-text-area .tab-h h3,
+.tab-text-area p.article-text,
+.tab-text-area .tab-link a {
+    display: flex;
+    width: 87%;
+    flex: 0 0 87%;
+
+    margin: auto;
+    padding: 0;
+}
+
+.tab-33 .tab-text-area .tab-h,
+.tab-33 .tab-text-area .tab-link {
+    display: flex;
+    height: 20%;
+}
+
+.tab-33 .tab-text-area h3 {
     /* font-size: 14px;
     line-height: 14px; */
+    display: flex;
+    margin: 0;
 
+
+    /* font-size: 14px; */
     font-size: 1.18vw;
     line-height: 1.18vw;
     font-weight: bold;
 }
 
-.tab-text-area p,
-.tab-text-area a {
+
+
+.tab-33 .tab-text-area p.article-text {
     /* font-size: 13px;
     line-height: 13px; */
+    display: flex;
+    margin: 0;
+    /* padding: 0 1.1vw; */
+    height: 60%;
 
     font-size: 1.1vw;
     line-height: 1.1vw;
 }
 
-.tabs article,
-.tab-text-area {
-    border-radius: 0 0 20px 0;
-}
+
 
 
 .cubes {
@@ -487,7 +516,7 @@ a:active {
     background-color: #eeeeee;
     background-color: rgb(238, 238, 238); */
 
-    border-radius: 0 20% 0 0;
+    border-radius: 0 2vw 0 0;
     border: 0.1vw hidden lightgray;
     /* 10% will give a soft gray border */
     /* border: 10% hidden darkgray; */
@@ -532,7 +561,6 @@ a:active {
 
 
 .cube-content div {
-
     margin: 0 auto;
     padding: 0;
 
@@ -658,6 +686,7 @@ a:active {
     /* 8px */
 }
 
+
 .cube nav>ul li a.read-more span,
 a.read-more-white span,
 a.read-more span {
@@ -670,8 +699,8 @@ a.read-more span {
 
 }
 
-.read-more-white span:hover,
-.read-more-white:hover,
+a.read-more-white span:hover,
+a.read-more-white:hover,
 .cube nav>ul li a:hover,
 .cube a span:hover,
 a.read-more:hover {
@@ -697,7 +726,7 @@ a.read-more {
     background: url(./images/read_more_yellow.png) no-repeat left center/0.7vw;
 }
 
-.tab a.a.read-more-white {
+.tab-33 a.read-more-white {
     background: url(./images/read_more_white.png) no-repeat left center/0.7vw;
 }
 
@@ -896,7 +925,7 @@ a.read-more:hover {
     background-color: orangered;
 }
 
-.tab {
+.tab-33 {
     background-color: rgb(129, 236, 218);
 }
 

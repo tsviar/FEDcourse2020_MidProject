@@ -46,6 +46,11 @@ body {
 /*       Flex styling */
 /* ========================== */
 
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -152,6 +157,7 @@ a {
 a:hover {
     text-decoration: underline;
     color: #005CA0 !important;
+    background: url(./images/read_more_yellow.png) no-repeat left center;
 }
 
 a:focus {
@@ -521,17 +527,15 @@ a:active {
     align-content: space-around;
 }
 
-/* .cube-content h3, */
-.cube-content.iBannerContent div,
+
 .cube-content div {
     flex: 0 0 100%;
     width: 90%;
+    margin-top: 0.2rem;
     padding: 0;
     padding-left: 1rem;
 }
 
-/* .cube-content h3 */
-.iBannerContent.cube-h,
 .cube-h {
     height: 20%;
     margin: 0;
@@ -540,7 +544,6 @@ a:active {
 
 }
 
-.iBannerContent.cube-h h3,
 .cube-h h3 {
     margin-right: 1.8rem;
     /* margin-right: 4%; */
@@ -551,7 +554,6 @@ a:active {
 
 }
 
-.iBannerContent.cube-img,
 .cube-img {
     height: 80%;
     min-height: 60%;
@@ -559,14 +561,37 @@ a:active {
     margin: auto;
 }
 
-.iBannerContent.cube-img img,
-
 .cube-img img {
     height: 100%;
     width: 100%;
     margin: auto;
     padding: 1% 10% 1% 10%;
 }
+
+.cube-nav-map .cube-img {
+    height: 55%;
+    min-height: 40%;
+    width: 48%;
+    min-width: 45%;
+    margin: auto;
+}
+
+
+.cube-nav-map {
+    flex: 0 0 100%;
+    height: 60%;
+    width: 90%;
+    padding: 0;
+    padding-left: 1rem;
+}
+
+.cube-nav-map img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 1% 10% 1% 10%;
+}
+
 
 .cube nav>ul {
     margin: 0px;
@@ -580,7 +605,6 @@ a:active {
 
 .cube nav>ul li {
     list-style-type: none;
-
 }
 
 .cube nav>ul li a,
@@ -592,8 +616,8 @@ a:active {
 .cube nav>ul li a.read-more {
     /*even margin between arrow and a tag */
     display: block;
-    margin-bottom: 8px;
-
+    margin-bottom: 0.8rem;
+    /* 8px */
 }
 
 /* a.read-more span, */
@@ -616,6 +640,14 @@ a.read-more {
     line-height: 1.1vw;
 }
 
+/* image-url, no-repeat, left to link's text, origin: center, size fixed to vw  */
+.cube a.read-more {
+    background: url(./images/read_more_yellow.png) no-repeat left center/0.7vw;
+}
+
+.cube a.read-more:hover {
+    background: url(./images/read_more_blue.png) no-repeat left center/0.7vw;
+}
 
 .cube-link {
     display: flex;

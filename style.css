@@ -110,7 +110,7 @@ body {
 /* ========================== */
 
 /* ========================== */
-/*   nav headers styling      */
+/*   nav, headers, styling   */
 /* ========================== */
 
 h1 {
@@ -131,7 +131,12 @@ h2 {
 nav>ul {
     margin: 0px;
     padding: 0px;
+    list-style: none;
+    position: relative;
+    display: block;
+
     list-style-type: none;
+
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -139,19 +144,19 @@ nav>ul {
 
 nav>ul li {
     list-style-type: none;
-
 }
 
 nav>ul li {
-    padding-left: 0.2vw;
+    /* padding-left: 0.2vw; */
 }
 
 nav>ul li a,
 a {
+    /* display: block; */
     text-decoration: none;
     outline: none;
-    padding-left: 0.2vw;
-    padding-right: 0.2vw;
+    /* padding-left: 0.2vw;
+  padding-right: 0.2vw; */
 }
 
 a:hover {
@@ -195,6 +200,10 @@ a:active {
     padding: 0;
 
 }
+
+/*  ============================================  */
+/*               Main Header                     */
+/*  ============================================  */
 
 .main-header {
     height: 105px;
@@ -371,7 +380,7 @@ a:active {
 }
 
 .top-menu,
-.top-menu nav>ul {
+.top-menu>ul {
     display: flex;
     width: 100%;
     min-width: 100%;
@@ -379,50 +388,41 @@ a:active {
 
 
 .top-menu {
-
     margin: 0 auto;
-    margin-top: 16px;
+    /* margin-top: 16px; */
 
     height: 100%;
     /* height: 17.99px; */
-
-    width: 100%;
-    /* width: 60%;
-    min-width: 60%; */
-
 }
 
 .top-menu>ul {
-    height: 90%;
-    min-height: 90%;
-
-    width: 70%;
-    min-width: 70%;
-
-    padding-bottom: 1rem;
+    height: 60%;
+    /* min-height: 100%; */
+    /* padding-bottom: 1rem; */
 
 }
 
 
-.top-menu li {
+.top-menu>ul li {
     height: 90%;
     max-height: 90%;
 
+    display: flex;
+    flex-wrap: nowrap;
+    /* flex: 0 0 100%; */
     margin: 0 auto;
-    padding: 2px 2px;
-    padding-bottom: 10px;
+    /* padding: 2px 2px; */
+
+    padding: 0.7vw 0 0.7vw 1.7vw;
+    /* padding-bottom: 1vw; */
 
     /* font-size: 14px; */
     font-size: 1.18vw;
     line-height: 1.18vw;
     text-align: center;
-    border-left: 1px solid #cbcbcb;
+    border-left: 1px solid #cbcbcb60;
 }
 
-.top-menu a.home {
-    height: 17px;
-    width: 17px;
-}
 
 .top-menu>ul li a {
     color: #fff;
@@ -433,20 +433,36 @@ a:active {
     font-weight: bold;
 }
 
+.top-menu li a.home:hover,
+.top-menu li a.home.selected-node {
 
-.top-menu a.home {
-    width: 17vw;
-    min-width: 17px;
+    /* height: 1.7vw; */
+    /* that way it gows or shrinks with container */
+    height: 100%;
+    width: 3.9vw;
     position: relative;
-    top: 0.8vw;
+
+    color: #005ca0;
     /* background: url(./images/menu_home.png) no-repeat 0 top; */
-    background: url("./images/menu_home.png") center/ 100% 100% no-repeat;
+    /* background: url(./images/menu_home.png) 0 top/ 100% 100% no-repeat; */
+    /* show blue home, not left gray */
+    background: url(./images/menu_home.png) -1.8vw top/ 100% 100% no-repeat;
 }
+
+.top-menu li a:hover,
+.top-menu li a.selectednode {
+    color: #005ca0;
+}
+
+
+/*  ============================================  */
+/*               Content area                     */
+/*  ============================================  */
 
 .main {
     /* height: 100vh; */
 
-    /* this gives the extra space above the footer when scrolling... */
+    /* this gives the extra space above the menu when scrolling... */
     /* min-height: 44rem; */
     min-height: 100rem;
 }
@@ -936,56 +952,121 @@ a.read-more:hover {
 } */
 
 
+/*  ============================================  */
+/*               Footer area                     */
+/*  ============================================  */
+
 
 #fixed-footer {
     position: fixed;
     bottom: 0;
-    /* right: 0;
-    left: 0; */
     z-index: 9999999;
-    /* 
+
     margin: 0 auto;
     padding: 0;
 
-    max-width: 100%; */
-    height: 38px;
+    max-width: 100%;
+    /* height: 38px; */
+    height: 3vw;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
 
 }
 
 
 .footer-menu {
 
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 100%;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
+
     margin: 0 auto;
-    margin-top: 16px;
+    padding: 0;
+    /* margin-top: 16px; */
 
     height: 100%;
     /* height: 17.99px; */
 
     width: 100%;
-    /* width: 60%;
-    min-width: 60%; */
-
 }
 
 .footer-menu>ul {
-    height: 90%;
-    min-height: 90%;
+
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 70%;
+
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+
+    height: 60%;
+    min-height: 60%;
+    max-height: 60%;
 
     width: 70%;
-    min-width: 70%;
+    min-width: 70vw;
+    max-width: 7rem;
 
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 
 }
 
 
-.footer-menu li {
+.footer-menu>ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
     height: 90%;
     max-height: 90%;
 
     margin: 0 auto;
-    padding: 2px 2px;
-    padding-bottom: 10px;
+    padding: 0;
+
+    /* font-size: 14px; */
+    font-size: 1.18vw;
+    line-height: 1.18vw;
+    text-align: center;
+    border-left: 1px solid #cbcbcb60;
+}
+
+
+.footer-menu>ul li a {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 100%;
+
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: center; */
+    align-content: center;
+    align-items: center;
+
+    height: 90%;
+    max-height: 90%;
+
+    margin: 0 auto;
+    padding: 0;
+    padding-left: 0.7vw;
 
     /* font-size: 14px; */
     font-size: 1.18vw;
@@ -995,9 +1076,54 @@ a.read-more:hover {
 }
 
 a.fb-Link {
-    position: relative;
-    bottom: 0.4vw;
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+
+    margin: auto;
+    /* padding: 1% 10% 1% 10%; */
 }
+
+/* prevent img from resizing with browser */
+a.fb-Link div {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+
+    height: 1.9vw;
+    max-height: 1.9vw;
+    min-height: 1.9vw;
+    width: 1.9vw;
+    min-width: 1.9vw;
+    max-width: 1.9vw;
+    margin: auto;
+}
+
+a.fb-Link div img {
+    position: relative;
+    bottom: 0.2vw;
+
+    display: flex;
+    flex: 0 0 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: auto;
+
+}
+
 
 /* ======================== */
 /*  Colors and Backgrounds */

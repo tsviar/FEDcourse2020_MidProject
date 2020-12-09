@@ -168,10 +168,10 @@ a:focus {
     outline: thin dotted silver;
 }
 
-a:active {
+/* a:active {
     border-width: 1px;
     border-style: dotted;
-}
+} */
 
 .select {
     position: absolute;
@@ -184,6 +184,7 @@ a:active {
     background: gray;
     overflow: hidden;
 }
+
 
 /* ======================= */
 /*     page layout items   */
@@ -269,6 +270,12 @@ a:active {
     align-items: center;
     align-content: center;
 }
+
+
+
+/* =========================== */
+/*   search, lang on header   */
+/* =========================== */
 
 .search-lang-bar {
     /* height: 19px; */
@@ -379,6 +386,8 @@ a:active {
     background: url("./images/search_button.png") center/100% no-repeat;
 }
 
+
+
 .top-menu,
 .top-menu>ul {
     display: flex;
@@ -420,29 +429,6 @@ a:active {
 
 
 
-.footer-menu>ul li {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-grow: 0;
-    flex-shrink: 0;
-
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
-    height: 90%;
-    max-height: 90%;
-
-    margin: 0 auto;
-    padding: 0;
-
-    /* font-size: 14px; */
-    font-size: 1.18vw;
-    line-height: 1.18vw;
-    text-align: center;
-    border-left: 1px solid #cbcbcb60;
-}
-
 .top-menu>ul li {
 
     display: flex;
@@ -476,8 +462,12 @@ a:active {
     color: #fff;
 
     /* font-size: 15px; */
-    font-size: 1.4vw;
-    line-height: 1.4vw;
+    /* font-size: 1.4vw; */
+    font-size: 1.1vw;
+
+    /* line height enlarged to enable dropdown staying displayd */
+    /* line-height: 1.4vw; */
+    line-height: 4.1vw;
     font-weight: bold;
 }
 
@@ -498,9 +488,49 @@ a:active {
 }
 
 .top-menu li a:hover,
-.top-menu li a.selectednode {
+.top-menu li a.selected-node {
     color: #005ca0;
 }
+
+
+/* ======================= */
+/*   drop-down menus   */
+/* ======================= */
+
+.top-menu>ul ul {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    /* top: 33px; */
+    /* top: 58px; */
+    top: 36px;
+    right: 0;
+    left: 0;
+    width: fit-content;
+
+    background: #909090;
+    box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.top-menu>ul li:hover ul {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: center;
+}
+
+.top-menu>ul ul li {
+    position: relative;
+    /* float: none; */
+    padding: 0 10px;
+
+}
+
 
 
 /*  ============================================  */

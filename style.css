@@ -423,6 +423,9 @@ a:active {
     border-left: 1px solid #cbcbcb60;
 }
 
+.top-menu>ul li:last-child {
+    border-left: none;
+}
 
 .top-menu>ul li a {
     color: #fff;
@@ -1049,6 +1052,9 @@ a.read-more:hover {
     border-left: 1px solid #cbcbcb60;
 }
 
+.footer-menu>ul li:last-child {
+    border-left: none;
+}
 
 .footer-menu>ul li a {
     display: flex;
@@ -1072,7 +1078,7 @@ a.read-more:hover {
     font-size: 1.18vw;
     line-height: 1.18vw;
     text-align: center;
-    border-left: 1px solid #cbcbcb;
+
 }
 
 a.fb-Link {

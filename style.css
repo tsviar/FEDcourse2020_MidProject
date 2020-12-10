@@ -385,7 +385,7 @@ a:active {
 
 }
 
-input.search-term {
+.search-term {
     display: flex;
     flex: 0 0 70%;
     /* width: 126px; */

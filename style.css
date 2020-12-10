@@ -200,7 +200,6 @@ a:active {
     /* min-width: 100%; */
     margin: 0 auto;
     padding: 0;
-
 }
 
 /*  ============================================  */
@@ -208,8 +207,8 @@ a:active {
 /*  ============================================  */
 
 .main-header {
-    height: 25.0vh;
-    /* height: 105px; */
+    height: 105px;
+
     /* height: 125px; */
     /* height: 40%; */
 
@@ -225,7 +224,7 @@ a:active {
             rgba(144, 144, 144, 0) 0%,
             rgba(144, 144, 144, 23) 87%,
             rgba(178, 178, 178, 0.8) 92%,
-            rgba(200, 200, 200, 0.97) 95%,
+            rgba(200, 200, 200, 0.9) 95%,
             rgba(201, 201, 201, 1) 97%)
         /* color: #000; */
 
@@ -580,20 +579,32 @@ a:active {
 /*  ============================================  */
 
 .main {
-    /* height: 100vh; */
+    /* position: relative; */
+    /* height: 100%; */
 
     /* this gives the extra space above the menu when scrolling... */
     /* min-height: 44rem; */
+
+    display: flex;
+    flex: 0 0 60%;
+    flex-wrap: nowrap;
+
+    height: 60%;
     min-height: 100rem;
+
+    margin: 5vw auto;
+    padding: 5vw 0;
+
 }
 
-.content_wrapper::before {
+/* .content_wrapper::before {
     position: relative;
-    display: display-box;
-    margin: 0px;
-    padding: 0px;
-    /* content: "content_wrapper before"; */
-}
+    display: border-box;
+    margin: 20px;
+
+    margin: 0 auto;
+
+} */
 
 .content_wrapper {
     position: absolute;

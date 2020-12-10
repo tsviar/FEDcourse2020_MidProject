@@ -529,19 +529,28 @@ a:active {
 /*   drop-down menus   */
 /* ======================= */
 
+.top-menu>ul li {
+    position: relative;
+}
+
 .top-menu>ul .dropdown-menu>ul {
     display: none;
+
     position: absolute;
     z-index: 200;
     /* top: 33px; */
     /* top: 58px; */
-    top: 36px;
-    right: 0;
+    /* top: 36px; */
+    /* right: 0; */
 
-    width: fit-content;
+    top: 100%;
+    right: 4%;
 
-    padding: 0;
-    margin: 0;
+    /* width: fit-content; */
+
+    /* padding: 10%; */
+    /* padding: 3px; */
+    margin: 0 auto;
 
     background: #909090;
     box-shadow: 5px 5px 9px 0px rgba(0, 0, 0, 0.5);
@@ -550,41 +559,48 @@ a:active {
 
 .top-menu>ul li:hover .dropdown-menu>ul {
     /* display: block; */
+
     display: flex;
     flex-direction: column;
-    /* flex: 0 0 50%; */
+    flex-wrap: nowrap;
 
-    justify-content: flex-end;
-    align-items: right;
-    align-content: top;
-
-    /* width: fit-content; */
-
-    padding: 0;
-    margin: 0;
 }
 
 /* .top-menu>ul ul li { */
 .top-menu>ul .dropdown-menu>ul li {
-
     position: relative;
     /* float: none; */
-    /* padding: 0 10px; */
-    padding: 0 1vw;
-    margin: auto;
-    border: none;
-    border-bottom: 1px solid #cbcbcb60;
 
     display: flex;
     flex-wrap: nowrap;
-    flex: 0 0 100%;
 
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: top;
+    justify-content: flex-start;
+    align-items: space-evenly;
+    align-content: flex-start;
+
+    padding: 0;
+    padding-right: 3px;
+    margin: 0 auto;
+
+    height: 2vw;
+    width: 13vw;
+
+
+    /* dont use it it aligns all text in the niddle, UGLY!!!*/
+    /* width: fit-content; */
+
+    border: none;
+    border-top: 1px solid #cbcbcb60;
+
 
 }
 
+.top-menu>ul li.dropdown-menu>ul li a {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
 
 
 /*  ============================================  */

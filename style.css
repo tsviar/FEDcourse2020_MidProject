@@ -107,6 +107,12 @@ body {
     align-items: stretch;
 }
 
+.flex-w-33 {
+    display: flex;
+    flex-basis: 32.33%;
+    width: 32.33%;
+}
+
 /* ================================== */
 
 /* =================================== */
@@ -207,8 +213,8 @@ a:active {
 /*  ============================================  */
 
 .main-header {
-    height: 105px;
-
+    height: 95px;
+    /* height: 105px; */
     /* height: 125px; */
     /* height: 40%; */
 
@@ -241,12 +247,12 @@ a:active {
 .header-center-area {
     height: 100%;
 
-    width: 90%;
-    min-width: 90%;
+    width: 70%;
+    min-width: 70%;
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .logo {
@@ -255,7 +261,8 @@ a:active {
     width: 20%;
 
     position: relative;
-    top: 33px;
+    top: 28px;
+    /* top: 33px; */
 }
 
 
@@ -464,13 +471,17 @@ a:active {
 
     padding: 0.8vw 0 0.7vw 1.7vw;
     /* padding-bottom: 1vw; */
+
     height: 100%;
     min-height: 100%;
     /* max-height: 90%; */
-    /* font-size: 14px; */
-    font-size: 1.18vw;
-    line-height: 1.18vw;
+
     border-left: 1px solid #cbcbcb60;
+
+    /* font-size: 14px; */
+    /* font-size: 1.18vw;
+    line-height: 1.18vw; */
+
 }
 
 .top-menu>ul li:last-child {
@@ -481,7 +492,9 @@ a:active {
     color: #fff;
 
     /* font-size: 15px; */
-    font-size: 1.35vw;
+    /* font-size: 1.35vw; */
+    font-size: 1.25vw;
+    /* line-height: 1.18vw; */
 
     /* line height enlarged to enable dropdown staying displayd */
     /* line-height: 1.4vw; */
@@ -586,14 +599,15 @@ a:active {
     /* min-height: 44rem; */
 
     display: flex;
-    flex: 0 0 60%;
+    flex: 1 1 60%;
     flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 
     height: 60%;
-    min-height: 100rem;
-
-    margin: 5vw auto;
-    padding: 5vw 0;
+    min-height: 60rem;
+    /* margin: 5vw auto;
+padding: 5vw 0; */
 
 }
 
@@ -608,40 +622,47 @@ a:active {
 
 .content_wrapper {
     position: absolute;
-    top: 135px;
+    top: 105px;
+    /* top: 135px; */
 
     height: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
-    min-width: 100%;
-    max-width: 100%;
+    width: 80%;
+    min-width: 80%;
+    max-width: 80%;
 
     margin: 0 auto;
     padding: 0px;
 
     display: flex;
     align-items: flex-start;
+    justify-content: center;
+    align-content: space-around;
+
 }
 
 .center-content {
     height: 100%;
     min-height: 100%;
 
-    width: 90%;
-    min-width: 90%;
-    max-width: 90%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
 
-    /* align-content: space-around; */
-    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
 
+    align-content: space-evenly;
     align-items: center;
 }
 
 
 .tabs {
-    height: 60.5%;
-    min-height: 60.5%;
-
+    /* height: 60.5%;
+    min-height: 60.5%; */
+    height: 50.5%;
+    min-height: 50.5%;
     min-width: 100%;
 
     /* width: 293px;
@@ -779,6 +800,7 @@ a:active {
     height: 37%;
     min-height: 37%;
 
+
     min-width: 100%;
     /* width: 293px; */
 
@@ -789,15 +811,11 @@ a:active {
     align-items: center;
 }
 
-
-.cube {
-    height: 100%;
-
-    width: 32.33%;
-    min-width: 32.33%;
-    flex-basis: 32.33%;
+.cube-33 {
 
     display: flex;
+    flex-basis: 32.33%;
+
     /* flex-direction: column; */
     /* flex-wrap: wrap; */
 
@@ -807,8 +825,12 @@ a:active {
     /* justify-content: center;
     align-items: center; */
 
-    color: #575757;
+    width: 32.33%;
+    min-width: 32.33%;
 
+    height: 100%;
+
+    color: #575757;
     background-image: linear-gradient(#fefefe, #eeeeee);
 
     /* background-color: #fefefe;
@@ -818,33 +840,13 @@ a:active {
 
     border-radius: 0 2vw 0 0;
     border: 0.1vw hidden lightgray;
-    /* 10% will give a soft gray border */
-    /* border: 10% hidden darkgray; */
     /* border-radius: 0 20px 0 0;
     border: 0.9px hidden darkgray; */
+    /* 10% will give a soft gray border */
+    /* border: 10% hidden darkgray; */
+
     border-style: outset hidden hidden outset;
 }
-
-/* .cube::before {
-    border-radius: 0 20px 0 0;
-
-    border-top: 1.8px solid #eeeeee;
-    border-bottom: 1.8px solid #fefefe;
-    background-image:
-        linear-gradient(#eeeeee, #fefefe),
-        linear-gradient(#eeeeee, #fefefe);
-        
-    background-size: 1px 100%;
-    background-position: 0 0, 100% 0;
-    background-repeat: no-repeat;
-
-        background-image: linear-gradient(#fefefe, #eeeeee);
-
-     background-color: #fefefe;
-    background-color: rgb(254, 254, 254);
-    background-color: #eeeeee;
-    background-color: rgb(238, 238, 238); 
-} */
 
 
 .cube-content {
@@ -966,7 +968,7 @@ a:active {
 }
 
 
-.cube nav>ul {
+.cube-33 nav>ul {
 
     height: 100%;
     margin: auto;
@@ -983,13 +985,13 @@ a:active {
 
 
 
-.cube nav>ul li a,
-.cube a span {
+.cube-33 nav>ul li a,
+.cube-33 a span {
     text-decoration: underline;
     color: #72716d;
 }
 
-.cube nav>ul li a.read-more {
+.cube-33 nav>ul li a.read-more {
     /*even margin between arrow and a tag */
     display: block;
     margin-bottom: 0.9vw;
@@ -997,10 +999,10 @@ a:active {
 }
 
 
-.cube nav>ul li a.read-more span,
+.cube-33 nav>ul li a.read-more span,
 a.read-more-white span,
 a.read-more span {
-    /* .cube a span { */
+    /* .cube-33 a span { */
 
     /* padding-left: 12px; */
     padding-left: 0.9vw;
@@ -1011,16 +1013,16 @@ a.read-more span {
 
 a.read-more-white span:hover,
 a.read-more-white:hover,
-.cube nav>ul li a:hover,
-.cube a span:hover,
+.cube-33 nav>ul li a:hover,
+.cube-33 a span:hover,
 a.read-more:hover {
     text-decoration: underline;
     color: #005CA0 !important;
 }
 
-.cube nav>ul li,
-.cube nav>ul li a,
-.cube nav>ul li a span,
+.cube-33 nav>ul li,
+.cube-33 nav>ul li a,
+.cube-33 nav>ul li a span,
 a.read-more-white,
 a.read-more-white span,
 a.read-more span,
@@ -1034,7 +1036,7 @@ a.read-more {
 
 /* image-url, no-repeat, left to link's text, origin: center, size fixed to vw  
    clip (border-box|padding-box|content-box) has no meaning here*/
-.cube a.read-more {
+.cube-33 a.read-more {
     background: url(./images/read_more_yellow.png) no-repeat left center/0.7vw;
 }
 
@@ -1048,7 +1050,7 @@ a.read-more:hover {
 }
 
 .tab-link a.read-more-white,
-.cube-link a.read-more {
+.cube-33-link a.read-more {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -1072,7 +1074,7 @@ a.read-more:hover {
 }
 
 /* 
-.cube a.read-more.yellow {
+.cube-33 a.read-more.yellow {
     background: url(./images/read_more_yellow.png) no-repeat left center;
 } */
 
@@ -1371,7 +1373,7 @@ a.fb-Link div img {
     background-color: rgb(129, 236, 218);
 }
 
-.cube{
+.cube-33 {
     background-color: rgb(124, 236, 110);
 }
 

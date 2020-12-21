@@ -397,22 +397,84 @@
                             <article class="tab-50">
 
                             <form>
+                                <div class= "form-h">
 
+                                       <h2>צור קשר</h2>
 
-                                    <h2>צור קשר</h2>
-
-                                    <span class="caption">
+                                        <span class="caption">
                                         ליצירת קשר עם קשרי לקוחות אנא מלאו את הפרטים הבאים ואנו נשמח לעמוד לרשותכם :
-                                    </span>                          
-                                    
-                                    <span class="instructions">
+                                        </span>  
+
+                                        <span class="instructions">
                                         * השדות המסומנים בכוכבית (*) הינם שדות חובה                                
-                                    </span>
+                                        </span>
 
-                                <fieldset>
+                                </div>
+
+                                <!-- &nbsp; is space -->
+
+                                 <fieldset class= "user-info"> 
+                                    <div>
+                                        <label for="fname">
+                                            <sup>*</sup>
+                                            שם פרטי
+                                        </label>
+                                        <input type="text" id="fname" 
+                                            name="fname" placeholder="שם פרטי"/>
+                                    </div> 
+                                    <div>
+                                        <label for="lname">
+                                            <sup>*</sup>
+                                            שם משפחה
+                                        </label>
+                                        <input type="text" id="lname"  
+                                               placeholder="שם משפחה"/>
+                                    </div>
+                    
+                                    <div>
+                                        <label for="phone">
+                                            <!-- <span class="requred">*</span> -->
+                                            <sup>*</sup>
+                                            טלפון
+                                        </label>
+
+                                        <label for="html2ab0cfa3">
+
+                                    <!-- pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}"  -->
+                                        <input type="tel" id="phone" name="phone"                                             
+                                            pattern="^\+?(972|0)(\-)?0?(([23489]{1}\d{7})|[5]{1}\d{8})$"
+                                            placeholder="+972-xxx-xxx-xxxx"
+                                            size = "20" minlength="9" maxlength="14"
+                                            required>
+                                            <!-- value="033-444-4444" -->
+                                        <!-- <small>Format: 0##-###-###</small> -->
+                                    </div>
 
 
-                                </fieldset>
+                                    <div>
+                                        <label for="phone">
+                                            <!-- <span class="requred">*</span> -->
+                                            <sup>*</sup>
+                                            E-mail
+                                        </label>
+                                        <input id="emailAddress" type="email"
+                                        pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                        placeholder="name@mail.[com/org,...]"
+                                        required>
+                                    </div>
+
+                                    <div class="user-free-text-d" >
+                                        <textarea name="user-free-text" 
+                                            rows="3" cols="20" 
+                                            id="user-free-text" class="user-free-text" onfocus="this.value = ''">
+                                            תוכן הפנייה
+                                        </textarea>
+                                    </div>
+
+                                    <input type="submit" value="שלח" />
+                            
+
+                                 </fieldset> 
 
                             </form>
 

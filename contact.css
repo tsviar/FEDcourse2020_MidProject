@@ -619,26 +619,17 @@
   line-height: 1.18vw;
 }
 
-.form-tab-50 .tab-50 form input[type="text"],
-.form-tab-50 .tab-50 form input[type="tel"],
-.form-tab-50 .tab-50 form input[type="email"]
-{
-    width: 160px;
-    padding: 3px;
-    border: 1px solid #808992;
-
-    
-    font-family: Arial,Arial, Helvetica, sans-serif;
-    font-size: 12px;
-}
-
 .form-tab-50 .tab-50 form .user-info {
     border-color: transparent;    
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-around;
+    align-items: space-evenly;
     /* flex: 0 0 100%; */
-    /* width: 100%; */
+
+    width: 72%;
 }
 
 .form-tab-50 .tab-50 form .user-info div{
@@ -653,11 +644,24 @@
 }
 
 
+.form-tab-50 .tab-50 form input[type="text"],
+.form-tab-50 .tab-50 form input[type="tel"],
+.form-tab-50 .tab-50 form input[type="email"]
+{
+    width: 160px;
+    padding: 3px;
+    border: 1px solid #808992;
+
+    
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
 .form-tab-50 .tab-50 form .user-info div input ,
 .form-tab-50 .tab-50 form .user-info div .submit {
        
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     /* align-content: space-around; */
     
 }

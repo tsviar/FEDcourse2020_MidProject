@@ -420,7 +420,8 @@
                                             שם פרטי
                                         </label>
                                         <input type="text" id="fname" 
-                                            name="fname" placeholder="שם פרטי"/>
+                                            name="fname" placeholder="שם פרטי"
+                                            required>
                                     </div> 
                                     <div>
                                         <label for="lname">
@@ -428,7 +429,8 @@
                                             שם משפחה
                                         </label>
                                         <input type="text" id="lname"  
-                                               placeholder="שם משפחה"/>
+                                               placeholder="שם משפחה"
+                                               required>
                                     </div>
                     
                                     <div>
@@ -438,13 +440,13 @@
                                             טלפון
                                         </label>
 
-                                        <label for="html2ab0cfa3">
-
                                     <!-- pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}"  -->
+                                    <!-- size = "20"  -->
                                         <input type="tel" id="phone" name="phone"                                             
                                             pattern="^\+?(972|0)(\-)?0?(([23489]{1}\d{7})|[5]{1}\d{8})$"
                                             placeholder="+972-xxx-xxx-xxxx"
-                                            size = "20" minlength="9" maxlength="14"
+                                           
+                                            minlength="9" maxlength="14"
                                             required>
                                             <!-- value="033-444-4444" -->
                                         <!-- <small>Format: 0##-###-###</small> -->
@@ -453,7 +455,7 @@
 
                                     <div>
                                         <label for="phone">
-                                            <!-- <span class="requred">*</span> -->
+                                            <!-- <span class="reqiured">*</span> -->
                                             <sup>*</sup>
                                             E-mail
                                         </label>
@@ -471,8 +473,13 @@
                                         </textarea>
                                     </div>
 
-                                    <input type="submit" value="שלח" />
-                            
+                                    <div class="submit-div">
+                                        <input class= "submit" type="submit"    value="שלח" 
+                                        onclick="formValidate();" 
+                                        formaction=
+                                        "javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Send&quot;, &quot;&quot;, true, &quot;ThisForm&quot;, &quot;&quot;, false, true))"
+                                         >      
+                                    </div>
 
                                  </fieldset> 
 

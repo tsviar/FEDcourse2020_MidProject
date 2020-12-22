@@ -421,7 +421,10 @@
                                         </label>
                                         <input type="text" id="fname" 
                                             name="fname" placeholder="שם פרטי"
-                                            required>
+                                      
+                                            required
+                                            x-moz-errormessage="שדה חובה"
+                                            >
                                     </div> 
                                     <div>
                                         <label for="lname">
@@ -430,7 +433,10 @@
                                         </label>
                                         <input type="text" id="lname"  
                                                placeholder="שם משפחה"
-                                               required>
+                                      
+                                               required
+                                               x-moz-errormessage="שדה חובה"
+                                               >
                                     </div>
                     
                                     <div>
@@ -440,29 +446,43 @@
                                             טלפון
                                         </label>
 
-                                    <!-- pattern="[0-9]{2,3}-[0-9]{3}-[0-9]{4}"  -->
-                                    <!-- size = "20"  -->
-                                        <input type="tel" id="phone" name="phone"                                             
-                                            pattern="^\+?(972|0)(\-)?0?(([23489]{1}\d{7})|[5]{1}\d{8})$"
-                                            placeholder="+972-xxx-xxx-xxxx"
-                                           
-                                            minlength="9" maxlength="14"
-                                            required>
+
+
+                                    <!-- working one -->
+                                    <!-- pattern="^(0(?:5[0-689]|7[246-9]|[2-4689]))((?:(?![1,0]{1}))\d{7})$"  -->
+
+                                    <!-- also working -->
+                                    <!-- pattern= "^(?:(?:(\+?972|\(\+?972\)|\+?\(972\))(?:\s|\.|-)?([1-9]\d?))|(0[23489]{1})|(0[57]{1}[0-9]))(?:\s|\.|-)?([^0\D]{1}\d{2}(?:\s|\.|-)?\d{4})$"  -->
+
+                                        <input type="tel" id="phone" name="phone"                                   
+
+                                        pattern= "^(?:(?:(\+?972|\(\+?972\)|\+?\(972\))(?:\s|\.|-)?([1-9]\d?))|(0[23489]{1})|(0[57]{1}[0-9]))(?:\s|\.|-)?([^0\D]{1}\d{2}(?:\s|\.|-)?\d{4})$" 
+                                       
+                                      
+                                        title="בבקשה למלא מספר טלפון תקין"
+                                            required
+                                            x-moz-errormessage="שדה חובה"
+                                            >
                                             <!-- value="033-444-4444" -->
                                         <!-- <small>Format: 0##-###-###</small> -->
                                     </div>
 
 
+                                    <!-- pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" -->
+                                    <!-- placeholder="name@mail.[com/org,...]" -->
+                                    <!-- pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" -->
+
                                     <div>
-                                        <label for="phone">
+                                        <label for="email">
                                             <!-- <span class="reqiured">*</span> -->
                                             <sup>*</sup>
                                             E-mail
                                         </label>
-                                        <input id="emailAddress" type="email"
-                                        pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                        <input id="emailAddress" name = "email" type="email"
                                         placeholder="name@mail.[com/org,...]"
-                                        required>
+                                        required
+                                        x-moz-errormessage="שדה חובה"
+                                        >
                                     </div>
 
                                     <div class="user-free-text-d" >
@@ -472,12 +492,14 @@
                                             תוכן הפנייה
                                         </textarea>
                                     </div>
+<!-- 
+                                    formaction=
+                                    "javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Send&quot;, &quot;&quot;, true, &quot;ThisForm&quot;, &quot;&quot;, false, true))" -->
 
                                     <div class="submit-div">
                                         <input class= "submit" type="submit"    value="שלח" 
-                                        onclick="formValidate();" 
-                                        formaction=
-                                        "javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$Send&quot;, &quot;&quot;, true, &quot;ThisForm&quot;, &quot;&quot;, false, true))"
+                                        onclick="return formValidate();" 
+                                        formaction="./index.html"
                                          >      
                                     </div>
 

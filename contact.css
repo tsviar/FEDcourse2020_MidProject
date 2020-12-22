@@ -730,7 +730,7 @@
     justify-content: center;
     align-content: space-around;
     text-align: center;
-    
+
     width: 4.31vw;
     height: 81%;
 
@@ -743,30 +743,10 @@
     background: linear-gradient(to top, rgba(0,92,160,1) 22%,rgba(0,92,160,1) 48%,rgba(125,185,232,1) 100%);
 
    
-
 }
 
 
-.tab-text-area .tab-h,
-.tab-text-area .article-text,
-.tab-text-area .tab-link {
-    display: flex;
-    flex-direction: row;
-    /* none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
-    flex: 0 0 100%;
-    width: 100%;
-
-    margin: auto;
-    padding: 0;
-
-    /* flex-wrap: nowrap; */
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
-    text-align: right;
-}
-
-
+  
 
 
 /*  cune-40 content */

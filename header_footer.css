@@ -359,7 +359,7 @@
     color: #fff;
 
     /* font-size: 15px; */
-    font-size: 1.55vw;
+    font-size: 1.45vw;
     /* font-size: 1.25vw; */
     /* line-height: 1.18vw; */
 
@@ -375,7 +375,7 @@
 
     /* height: 1.7vw; */
     /* that way it gows or shrinks with container */
-    height: 1.4vw;
+    height: 1.45vw;
 
     width: 3.5vw;
     position: relative;
@@ -504,7 +504,7 @@
 
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     align-content: space-around;
 
@@ -517,8 +517,8 @@
 
     display: flex;
     flex-wrap: nowrap;
-    flex: 0 0 100%;
-    justify-content: space-evenly;
+    flex: 0 0 93%;
+    justify-content: space-between;
     /* justify-content: center; */
     align-items: center;
     align-content: center;
@@ -530,7 +530,7 @@
     height: 100%;
     /* height: 17.99px; */
 
-    width: 100%;
+    width: 93%;
 }
 
 .footer-menu>ul {
@@ -565,7 +565,7 @@
     flex-wrap: nowrap;
     flex-grow: 0;
     flex-shrink: 0;
-
+    
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -604,13 +604,14 @@
 
     margin: 0 auto;
     padding: 0;
+
     padding-left: 0.7vw;
 
     /* font-size: 14px; */
     /* font-size: 1.18vw; */
     /* line-height: 1.18vw; */
 
-    font-size: 1.50vw;
+    font-size: 1.40vw;
     line-height: 4.6vw;
 
     text-align: center;

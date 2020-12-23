@@ -105,7 +105,7 @@
     justify-content: center;
 
     height: 60%;
-    min-height: 60rem;
+    min-height: 40rem;
     /* margin: 5vw auto;
 padding: 5vw 0; */
 
@@ -125,14 +125,13 @@ padding: 5vw 0; */
     top: 105px;
     /* top: 135px; */
 
-    height: 88%;
+    height: 39rem;
+    
     /* min-height: 100vh; */
 
-    
-
-    width: 79%;
-    min-width: 79%;
-    max-width: 79%;
+    width: 57.0rem;
+    min-width:  57.0rem; 
+    /* max-width: 57.0rem;*/
 
     margin: 0 auto;
     padding: 0px;

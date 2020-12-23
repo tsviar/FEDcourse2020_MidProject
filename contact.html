@@ -421,7 +421,7 @@
                                         </label>
                                         <input type="text" id="fname" 
                                             name="fname" placeholder="שם פרטי"
-                                      
+                                            class="input-look-feel"   
                                             required
                                             x-moz-errormessage="שדה חובה"
                                             >
@@ -433,7 +433,7 @@
                                         </label>
                                         <input type="text" id="lname"  
                                                placeholder="שם משפחה"
-                                      
+                                               class="input-look-feel" 
                                                required
                                                x-moz-errormessage="שדה חובה"
                                                >
@@ -458,11 +458,11 @@
 
                                         pattern= "^(?:(?:(\+?972|\(\+?972\)|\+?\(972\))(?:\s|\.|-)?([1-9]\d?))|(0[23489]{1})|(0[57]{1}[0-9]))(?:\s|\.|-)?([^0\D]{1}\d{2}(?:\s|\.|-)?\d{4})$" 
                                        
-                                      
                                         title="בבקשה למלא מספר טלפון תקין"
-                                            required
-                                            x-moz-errormessage="שדה חובה"
-                                            >
+                                        required
+                                        x-moz-errormessage="שדה חובה"
+                                        class="input-look-feel" 
+                                        >
                                             <!-- value="033-444-4444" -->
                                         <!-- <small>Format: 0##-###-###</small> -->
                                     </div>
@@ -482,13 +482,16 @@
                                         placeholder="name@mail.[com/org,...]"
                                         required
                                         x-moz-errormessage="שדה חובה"
+                                        class="input-look-feel" 
                                         >
                                     </div>
 
                                     <div class="user-free-text-d" >
                                         <textarea name="user-free-text" 
                                             rows="3" cols="20" 
-                                            id="user-free-text" class="user-free-text" onfocus="this.value = ''">
+                                            id="user-free-text" class="user-free-text" onfocus="this.value = ''"
+                                            class="input-look-feel" 
+                                        >
                                             תוכן הפנייה
                                         </textarea>
                                     </div>
@@ -529,8 +532,8 @@
                                         <p><strong>פז חברת נפט בע"מ </strong></p>
                                         <p>יורו פארק, בניין הולנד</p>
                                         <p>קיבוץ יקום 60972</p>
-                                        <p>1-800-774-774 טל. שירות לקוחות</p>
-                                        <p>09-8641714 .פקס</p>
+                                        <p>טל. שירות לקוחות 1-800-774-774</p>
+                                        <p>פקס. 09-8641714</p>
                                 </div>
     
                             </div>

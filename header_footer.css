@@ -10,7 +10,7 @@
 }
 
 
-.select {
+/* .select {
     position: absolute;
     left: 5px;
     bottom: 5px;
@@ -20,7 +20,8 @@
     color: #005ca0;
     background: gray;
     overflow: hidden;
-}
+} */
+
 /*  ============================================  */
 /*               Main Header                     */
 /*  ============================================  */
@@ -60,12 +61,16 @@
 .header-center-area {
     height: 100%;
 
-    width: 97%;
-    min-width:97%;
+    /* width: 97%;
+    min-width:97%; */
     /* width: 70%;
     min-width: 70%; */
+    width: 60rem;
 
     display: flex;
+    flex-wrap: nowrap;
+    flex: 0 0 60rem;
+
     flex-direction: row;
     justify-content: space-evenly;
   
@@ -191,16 +196,21 @@
 }
 
 .search {
+    /* font-family: Arial,Arial, Helvetica, sans-serif; */
+
     /* height: 19px;
        width: 132px;
     position: relative; */
     display: flex;
-    flex: 0 0 100%;
+    flex: 0 0 90%;
     align-items: center;
     
-    width: 100%;
+    width: 1.2rem;
     /* height: 1.6vw; */
-    height: 90%;
+    /* height: 1rem; */
+    /* height: 90%;
+    height: 4rem; */
+    
 
 }
 
@@ -209,25 +219,27 @@
     color: #fff;
 
     /* font-size: 12px; */
-    font-size: 1.3vw;
-    line-height: 1.3vw;
+
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+
     font-weight: bold;
 
-    height: 90%;
+    height: 1.2rem;
 }
 
 
 .search-term {
     display: flex;
-    flex: 0 0 80%;
+    flex: 0 0 8.5rem;
     /* width: 126px; */
-    width: 80%;
-    height: 2.0vw;
+    width: 8.5rem;
+    height: 1.2rem;
     
     padding: 1px 2px;
 
     /* font: 400 13.3333px Arial; */
-    font: 400 1.3vw Arial;
+    font: 500 0.7rem Arial;
 
     letter-spacing: normal;
     word-spacing: normal;
@@ -238,28 +250,35 @@
     text-rendering: auto;
     vertical-align: center;
 
-    color: internal-light-dark(black, white);
-    /* color: black; */
+    /* color: internal-light-dark(black, white); */
+    color: black;
     background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
 
-    border-radius: 0 0.9vw 0 0;
+    border-radius: 0 0.5rem 0 0;
     border-color: transparent;
     border-width: 2px;
     border-style: inset;
     border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-
-
 }
 
-.search-term:focus {
-    /* color: #00B4CC; */
+/* .search-term:focus {
+    color: #00B4CC;
+} */
+
+
+input, textarea, select {
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    /* font-size: 12px; */
+    /* font-size: 0.7rem;
+    line-height: 0.8rem; */
 }
 
 .search-button {
     display: flex;
     flex: 0 0 12%;
-    width: 12%;
-    height: 2.1vw;
+    width: 1rem;
+  
+    height: 1.3rem;
 
     /* border: 1px solid #00B4CC; */
 
@@ -359,13 +378,14 @@
     color: #fff;
 
     /* font-size: 15px; */
-    font-size: 1.45vw;
-    /* font-size: 1.25vw; */
-    /* line-height: 1.18vw; */
+
+    font-size: 0.9rem;
+    line-height: 1.0rem;
+
 
     /* line height enlarged to enable dropdown staying displayd */
     /* line-height: 1.4vw; */
-    line-height: 4.6vw;
+    /* line-height: 4.6vw; */
     font-weight: bold;
 
 }
@@ -450,12 +470,9 @@
     padding-right: 3px;
     margin: 0 auto;
 
-    height: 2vw;
-    /* height: 3.6vw; */
-    line-height: 4.6vw;
-    width: 15vw;
-    /* width: 100%; */
-    min-width: 50%;
+
+    height: 1.5rem; 
+    width: 9rem;
 
 
     /* dont use it it aligns all text in the niddle, UGLY!!!*/
@@ -514,10 +531,17 @@
 .footer-menu {
 
     position: relative;
+  
+    height: 100%;
+    /* height: 17.99px; */
+
+    /* width: 93%; */
+    width: 57rem;
 
     display: flex;
     flex-wrap: nowrap;
-    flex: 0 0 93%;
+    flex: 0 0 57rem;
+    /* flex: 0 0 93%; */
     justify-content: space-between;
     /* justify-content: center; */
     align-items: center;
@@ -527,10 +551,7 @@
     padding: 0;
     /* margin-top: 16px; */
 
-    height: 100%;
-    /* height: 17.99px; */
 
-    width: 93%;
 }
 
 .footer-menu>ul {
@@ -577,8 +598,7 @@
     padding: 0;
 
     /* font-size: 14px; */
-    font-size: 1.18vw;
-    line-height: 1.18vw;
+
     text-align: center;
     /* border-left: 1.5px solid #cbcbcb60; */
     border-left: 1.9px solid #fff;
@@ -611,8 +631,9 @@
     /* font-size: 1.18vw; */
     /* line-height: 1.18vw; */
 
-    font-size: 1.40vw;
-    line-height: 4.6vw;
+
+    font-size: 0.8rem;
+    line-height: 0.9rem;
 
     text-align: center;
 
@@ -656,13 +677,13 @@ a.fb-Link div img {
     bottom: 0.2vw;
 
     display: flex;
-    flex: 0 0 100%;
-    height: 100%;
-    max-height: 100%;
-    min-height: 100%;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
+    flex: 0 0 90%;
+    height: 90%;
+    max-height: 90%;
+    min-height: 90%;
+    width: 90%;
+    min-width: 90%;
+    max-width: 90%;
     margin: auto;
 
 }
